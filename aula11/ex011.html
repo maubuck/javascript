@@ -9,7 +9,7 @@
 <body>
     <h1>Aqui no Brasil, você é considerado estrangeiro ou brasileiro?</h1>
     <p>
-        Qual país você nesceu? <input type="text" name="pais" id="pais">
+        Qual país você nesceu? <input type="text" name="txtp" id="txtp">
         <input type="button" value="Verificar" onclick="calcular()">
     </p>
     <div id="res">
@@ -18,13 +18,10 @@
 
     <script>
         function calcular() {
-            var nac = window.document.getElementById('pais')
+            var p = window.document.getElementById('txtp')
             var res = window.document.getElementById('res')
-            if (nac == "Brasil") {  
-                res.innerHTML = `<p>Você é <strong>BRASILEIRO</strong>, pois nasceu no ${nac}</p>`
-            } else {
-                res.innerHTML = `<p>Você é <strong>ESTRANGEIRO</strong>, pois nasceu no ${nac}</p>`
-            }
+            var pais = p.valeu
+            res.innerHTML = `Você nasceu no país: ${p}`
         }
     </script>
 </body>
